@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # numberic
 
 ## Project setup
@@ -22,3 +23,6 @@ npm run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+=======
+# InputNumber
+>>>>>>> 2a882de (Initial commit)
