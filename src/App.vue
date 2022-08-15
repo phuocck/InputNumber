@@ -1,17 +1,25 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <HelloWorld msg="Welcome to Your Vue.js App" />
+
+  <ms-number :label="'Số tiền'" v-model="amount" :initValue="amount"></ms-number>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import HelloWorld from "./components/HelloWorld.vue";
+import MsNumber from "./components/MsNumber.vue";
+import {ref} from 'vue';
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
-  }
-}
+    HelloWorld,
+    MsNumber,
+  },
+  setup(props, { emit }) {
+    const amount = ref(1000);
+    return { amount };
+  },
+};
 </script>
 
 <style>
@@ -24,3 +32,5 @@ export default {
   margin-top: 60px;
 }
 </style>
+
+/* eslint-disable */
